@@ -1,0 +1,190 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 3.3 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated by
+% biber as required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+
+\refsection{1}
+  \datalist[entry]{ynt/global//global/global/global}
+    \entry{molina_es_2021}{incollection}{}{}
+      \name{editora}{2}{}{%
+        {{hash=8c94217ed4c2d8d8afc9a078c70804cf}{%
+           family={Molina},
+           familyi={M\bibinitperiod},
+           given={Bárbara},
+           giveni={B\bibinitperiod}}}%
+        {{hash=873ba055d53bef46a1159a05ec20686b}{%
+           family={Serrano},
+           familyi={S\bibinitperiod},
+           given={Matías},
+           giveni={M\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {Valparaíso, Chile}%
+      }
+      \list{publisher}{1}{%
+        {Tsonami Ediciones}%
+      }
+      \strng{editorabibnamehash}{c8c619f0f853361609ffeccb3ed65e8b}
+      \strng{editoranamehash}{c8c619f0f853361609ffeccb3ed65e8b}
+      \strng{editorafullhash}{c8c619f0f853361609ffeccb3ed65e8b}
+      \strng{editorafullhashraw}{c8c619f0f853361609ffeccb3ed65e8b}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{Encuentro Tsonami 2019: prácticas sonoras en contextos de crisis}
+      \field{edition}{[1re édition]}
+      \field{editoratype}{collaborator}
+      \field{isbn}{978-956-09669-0-2}
+      \field{note}{{OCLC}: 1377543103}
+      \field{title}{¿Es posible una acústica feminista?}
+      \field{year}{2021}
+      \field{dateera}{ce}
+      \true{nocite}
+      \field{pages}{32\bibrangedash 38}
+      \range{pages}{7}
+    \endentry
+    \entry{molina_dispositivas_2022}{incollection}{}{}
+      \name{editora}{2}{}{%
+        {{hash=8c94217ed4c2d8d8afc9a078c70804cf}{%
+           family={Molina},
+           familyi={M\bibinitperiod},
+           given={Bárbara},
+           giveni={B\bibinitperiod}}}%
+        {{hash=873ba055d53bef46a1159a05ec20686b}{%
+           family={Serrano},
+           familyi={S\bibinitperiod},
+           given={Matías},
+           giveni={M\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {Valparaíso, Chile}%
+      }
+      \list{publisher}{1}{%
+        {Tsonami Ediciones}%
+      }
+      \strng{editorabibnamehash}{c8c619f0f853361609ffeccb3ed65e8b}
+      \strng{editoranamehash}{c8c619f0f853361609ffeccb3ed65e8b}
+      \strng{editorafullhash}{c8c619f0f853361609ffeccb3ed65e8b}
+      \strng{editorafullhashraw}{c8c619f0f853361609ffeccb3ed65e8b}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{Memoria {BASE} Tsonami 2018-2021: colón 2390}
+      \field{edition}{[1re édition]}
+      \field{editoratype}{collaborator}
+      \field{isbn}{978-956-09669-1-9}
+      \field{note}{{OCLC}: 1377543157}
+      \field{title}{Dispositivas de encarnación}
+      \field{year}{2022}
+      \field{dateera}{ce}
+      \true{nocite}
+      \field{pages}{32\bibrangedash 37}
+      \range{pages}{6}
+    \endentry
+    \entry{serrano_acevedo_amplificar_2023}{article}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=743cfeaa3fe1747cf33b6e9c41481467}{%
+           family={Serrano\bibnamedelima Acevedo},
+           familyi={S\bibinitperiod\bibinitdelim A\bibinitperiod},
+           given={Matías},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{743cfeaa3fe1747cf33b6e9c41481467}
+      \strng{fullhash}{743cfeaa3fe1747cf33b6e9c41481467}
+      \strng{fullhashraw}{743cfeaa3fe1747cf33b6e9c41481467}
+      \strng{bibnamehash}{743cfeaa3fe1747cf33b6e9c41481467}
+      \strng{authorbibnamehash}{743cfeaa3fe1747cf33b6e9c41481467}
+      \strng{authornamehash}{743cfeaa3fe1747cf33b6e9c41481467}
+      \strng{authorfullhash}{743cfeaa3fe1747cf33b6e9c41481467}
+      \strng{authorfullhashraw}{743cfeaa3fe1747cf33b6e9c41481467}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{shorttitle}
+      \field{abstract}{Repositorio académico de la Universidad de Chile. Tesis, artículos y libros publicados en formato digital con distintos niveles de acceso}
+      \field{langid}{spanish}
+      \field{note}{Accepted: 2024-04-29T16:21:13Z Publisher: Universidad de Chile}
+      \field{shorttitle}{Amplificar la duda}
+      \field{title}{Amplificar la duda: exploraciones mediales sobre las sensibilidades extrañas}
+      \field{urlday}{15}
+      \field{urlmonth}{5}
+      \field{urlyear}{2024}
+      \field{year}{2023}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \true{nocite}
+      \verb{file}
+      \verb Full Text PDF:/Users/misaa/Zotero/storage/RCV6HSJE/Serrano Acevedo - 2023 - Amplificar la duda exploraciones mediales sobre l.pdf:application/pdf
+      \endverb
+      \verb{urlraw}
+      \verb https://repositorio.uchile.cl/handle/2250/198291
+      \endverb
+      \verb{url}
+      \verb https://repositorio.uchile.cl/handle/2250/198291
+      \endverb
+    \endentry
+    \entry{serrano_amplificar_2024}{article}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=873ba055d53bef46a1159a05ec20686b}{%
+           family={Serrano},
+           familyi={S\bibinitperiod},
+           given={Matías},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{language}{1}{%
+        {Español}%
+      }
+      \strng{namehash}{873ba055d53bef46a1159a05ec20686b}
+      \strng{fullhash}{873ba055d53bef46a1159a05ec20686b}
+      \strng{fullhashraw}{873ba055d53bef46a1159a05ec20686b}
+      \strng{bibnamehash}{873ba055d53bef46a1159a05ec20686b}
+      \strng{authorbibnamehash}{873ba055d53bef46a1159a05ec20686b}
+      \strng{authornamehash}{873ba055d53bef46a1159a05ec20686b}
+      \strng{authorfullhash}{873ba055d53bef46a1159a05ec20686b}
+      \strng{authorfullhashraw}{873ba055d53bef46a1159a05ec20686b}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{((en))clave sonora vol \#4: Comunidades en lo sonoro}
+      \field{title}{Amplificar la duda. {Escuchando} a las sensibilidades extrañas}
+      \field{volume}{4}
+      \field{year}{2024}
+      \true{nocite}
+      \field{pages}{24\bibrangedash 37}
+      \range{pages}{14}
+      \verb{urlraw}
+      \verb https://proyectosonec.org/2024/enclave-sonora-vol-4-comunidades-en-lo-sonoro/
+      \endverb
+      \verb{url}
+      \verb https://proyectosonec.org/2024/enclave-sonora-vol-4-comunidades-en-lo-sonoro/
+      \endverb
+    \endentry
+  \enddatalist
+\endrefsection
+\endinput
+

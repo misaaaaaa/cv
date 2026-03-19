@@ -1,0 +1,46 @@
+#!/usr/bin/env sh
+# Block files >= 99.9 MB from entering commits.
+
+set -eu
+
+MAX_BYTES=99900000
+MAX_MB="99.9"
+
+# Only files added/copied/modified/renamed in index.
+staged_files=$(git diff --cached --name-only --diff-filter=ACMR)
+[ -z "${staged_files}" ] && exit 0
+
+failed=0
+
+old_ifs=$IFS
+IFS='
+'
+for path in ${staged_files}; do
+  # Size from index (staged blob), not working tree.
+  if ! size=$(git cat-file -s ":${path}" 2>/dev/null); then
+    continue
+  fi
+
+  if [ "${size}" -ge "${MAX_BYTES}" ]; then
+    failed=1
+    size_mb=$(awk "BEGIN { printf \"%.2f\", ${size}/1000000 }")
+
+    echo ""
+    echo "[large-file-check] Blocked: ${path} (${size_mb} MB)"
+    echo "[large-file-check] Limit: ${MAX_MB} MB"
+
+    # Unstage automatically so it is ignored by this commit.
+    git restore --staged -- "${path}" || true
+    echo "[large-file-check] Action: file was unstaged."
+    echo "[large-file-check] If needed, add a pattern/path to .gitignore."
+  fi
+done
+IFS=$old_ifs
+
+if [ "${failed}" -ne 0 ]; then
+  echo ""
+  echo "Commit aborted by large file guard."
+  exit 1
+fi
+
+exit 0

@@ -1,0 +1,53 @@
+#!/usr/bin/env sh
+# Prevent pushing commits that introduce blobs >= 99.9 MB.
+
+set -eu
+
+MAX_BYTES=99900000
+MAX_MB="99.9"
+
+check_range() {
+  range="$1"
+  tmp_file=$(mktemp)
+
+  git rev-list --objects ${range} > "${tmp_file}"
+
+  # List objects and inspect blob sizes.
+  while IFS= read -r line; do
+    oid=$(printf '%s' "${line}" | awk '{print $1}')
+    [ -z "${oid}" ] && continue
+
+    type=$(git cat-file -t "${oid}" 2>/dev/null || true)
+    [ "${type}" = "blob" ] || continue
+
+    size=$(git cat-file -s "${oid}" 2>/dev/null || echo 0)
+    if [ "${size}" -ge "${MAX_BYTES}" ]; then
+      path=$(printf '%s' "${line}" | cut -d' ' -f2-)
+      size_mb=$(awk "BEGIN { printf \"%.2f\", ${size}/1000000 }")
+
+      echo ""
+      echo "[large-file-check] Push blocked by oversized file"
+      echo "[large-file-check] File: ${path}"
+      echo "[large-file-check] Size: ${size_mb} MB"
+      echo "[large-file-check] Limit: ${MAX_MB} MB"
+      rm -f "${tmp_file}"
+      exit 3
+    fi
+  done < "${tmp_file}"
+
+  rm -f "${tmp_file}"
+}
+
+# Read refs from stdin: <local ref> <local sha> <remote ref> <remote sha>
+while IFS=' ' read -r local_ref local_sha remote_ref remote_sha; do
+  [ -z "${local_sha}" ] && continue
+
+  if [ "${remote_sha}" = "0000000000000000000000000000000000000000" ]; then
+    # New branch push.
+    check_range "${local_sha}"
+  else
+    check_range "${remote_sha}..${local_sha}"
+  fi
+done
+
+exit 0

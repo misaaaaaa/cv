@@ -26,7 +26,7 @@
 %----------------------------------------------------------------------------------------
 
 % article class because we want to fully customize the page and not use a cv template
-\documentclass[a4paper,12pt]{article}
+\documentclass[a4paper,11pt]{article}
 
 %----------------------------------------------------------------------------------------
 %	FONT
@@ -54,7 +54,7 @@
 \RequirePackage{color}
 \RequirePackage{graphicx}
 \usepackage[usenames,dvipsnames]{xcolor}
-\usepackage[scale=0.9]{geometry}
+\usepackage[scale=0.94]{geometry}
 
 %tabularx environment
 \usepackage{tabularx}
@@ -79,7 +79,7 @@
 %CV Sections inspired by: 
 %http://stefano.italians.nl/archives/26
 \titleformat{\section}{\Large\scshape\raggedright}{}{0em}{}[\titlerule]
-\titlespacing{\section}{0pt}{10pt}{10pt}
+\titlespacing{\section}{0pt}{11pt}{8pt}
 
 %for publications
 \usepackage[style=authoryear,sorting=ynt, maxbibnames=2]{biblatex}
@@ -89,7 +89,16 @@
 \definecolor{linkcolour}{rgb}{0,0.2,0.6}
 \hypersetup{colorlinks,breaklinks,urlcolor=linkcolour,linkcolor=linkcolour}
 \addbibresource{citations.bib}
-\setlength\bibitemsep{1em}
+\setlength\bibitemsep{0.35em}
+
+% Compact global spacing so long CV content fits in two pages.
+\setlength{\parskip}{0.45em}
+\setlength{\tabcolsep}{6pt}
+\renewcommand{\arraystretch}{1.08}
+
+\makeatletter
+\renewcommand{\today}{\number\day\ de\ \ifcase\month\or enero\or febrero\or marzo\or abril\or mayo\or junio\or julio\or agosto\or septiembre\or octubre\or noviembre\or diciembre\fi\ de\ \number\year}
+\makeatother
 
 %for social icons
 \usepackage{fontawesome5}
@@ -145,10 +154,10 @@
 \Huge{Matías Ignacio Serrano Acevedo} \\[7.5pt]
 
 %\href{https://linkedin.com/in/username}{\raisebox{-0.05\height}\faLinkedin\ username} \ $|$ \ 
-\href{https://misaa.cc}{\raisebox{-0.05\height}\faGlobe \ misaa.cc} \ $|$ \
-\href{https://github.com/misaaaaaa}{\raisebox{-0.05\height}\faGithub\ misaaaaaa} \ $|$ \ 
-\href{mailto:matias.serrano@uchile.cl}{\raisebox{-0.05\height}\faEnvelope \ matias.serrano@uchile.cl} \ $|$ \
-{\raisebox{-0.05\height} Santiago, Chile} \\
+\href{https://misaa.cc}{\faGlobe \ misaa.cc} \ $|$ \
+\href{https://github.com/misaaaaaa}{\faGithub\ misaaaaaa} \ $|$ \ 
+\href{mailto:matias.serranoacevedo@gmail.com}{\faEnvelope \ matias.serranoacevedo@gmail.com} \ $|$ \
+{Santiago, Chile} \\
 \end{tabularx}
 
 
@@ -162,6 +171,8 @@
 %----------------------------------------------------------------------------------------
 \section{Formación}
 \begin{tabularx}{\linewidth}{@{}l X@{}}	
+2026 - \_\_\_\_ & Doctorado en Artes y Humanidades - \textbf{Universidad de Santiago de Chile} \hfill \normalsize  \\
+
 2021 - 2024 & Magíster en Artes Mediales - \textbf{Universidad de Chile} \hfill \normalsize  \\
 
 2011 - 2017 & Licenciatura en Artes con mención en Sonido - \textbf{Universidad de Chile} \hfill  \\ 
@@ -176,10 +187,12 @@
 %This CV can also be automatically complied and published using GitHub Actions. For details, \href{https://github.com/jitinnair1/autoCV}{click here}.
 
 %Experience
-\section{Proyectos artísticos}
+\section{Proyectos de Artes Visuales}
 \begin{tabularx}{\linewidth}{@{}l X@{}}	
 
-2025 & \textit{oí 1, oí 2 \& oí 3}. Instalación sonora el exposición colectiva con Almendra Díaz @  \textbf{Galería de Artes Visuales UNIACC}. Santiago, Chile. \hfill \normalsize \href{https://misaa.cc/projects/cuandotodaslaspalabras.html}{info} \\
+2026 & \textit{Llluvia Metropolitana}. Instalación sonora junto a Rainer Krause @  \textbf{Galería Metroplitana}. Santiago, Chile. \hfill \normalsize \href{https://misaa.cc/projects/llluviametropolitana.html.html}{info} \\
+
+2025 & \textit{oí 1, oí 2 \& oí 3}. Instalación sonora en exposición colectiva con Almendra Díaz @  \textbf{Galería de Artes Visuales UNIACC}. Santiago, Chile. \hfill \normalsize \href{https://misaa.cc/projects/cuandotodaslaspalabras.html}{info} \\
 
 2025 & \textit{Hablar con extraños}. Instalación sonora @  \textbf{Galería Micromedios}. Santiago, Chile. \hfill \normalsize \href{https://translab.uchilefau.cl/hablar-con-extranos/}{info} \\
 
@@ -201,6 +214,31 @@
 2017 & \textit{Ensayo de horizontalidad}. Co-created as Colectiva 22bits. Instalación sonora en exposición colectiva "6° Concurso de Arte y Tecnologías Digitales en Homenaje a Matilde Pérez". \textsc{3rd place, students tier} @  \textbf{Museo de Arte Contemporáneo}. Santiago, Chile. \hfill \normalsize \href{https://misaa.cc/projects/edh.html}{info} \\
 
 \end{tabularx}
+
+\section{Participación en proyectos interdisciplinarios y colectivos}
+\begin{tabularx}{\linewidth}{@{}l X@{}}
+
+2023 - \_\_\_\_ & \textit{Núcleo de Artes Sonoras}. Investigación y promoción de las artes sonoras dentro de las Artes Visuales. Departamento de Artes Visuales, U. de Chile. \\
+
+2025 - 2026 & \textit{Aproximaciones subacuáticas}. Proyecto de creación e investigación interdisciplinar (arte sonoro y nado). Proyecto Fondart dirigido por Fernanda Fábrega. \\
+
+2024 & \textit{Árboles ciudadanos}. Proyecto de creación e investigación interdisciplinar (electrónica, sonido, teatro y espacio público) en torno a los árboles en entornos urbanos. Producido por compañía Organismo Teatro. \\
+
+2020 & \textit{Ruido propio}. Núcleo de investigación de memoria e identidad sonora dirigido por Dra. Carla Badani. Departamento de Sonido, Universidad de Chile. \\
+
+2019 - 2024 & \textit{Archivo Veintidós}. Sello de Música Experimental y Arte Sonoro del sur global co-creado y co-dirigido con Bárbara Molina (Colectiva 22bits). \\
+
+2018 - 2020 & \textit{Casa Oram}. Espacio de talleres y actividades en torno a la tecnología y la escucha ubicado en barrio Matta Sur, coordinado en conjunto a Bárbara Molina (Colectiva 22bits). \\
+
+2016 & \textit{Tutupá}. Proyecto de investigación y creación tecnológica. Convocatoria Becas Santiago Maker Space. \\
+
+\end{tabularx}
+
+\newpage
+\small
+\setlength{\parskip}{0.05em}
+\renewcommand{\arraystretch}{0.9}
+\titlespacing{\section}{0pt}{6pt}{3pt}
 
 %\begin{jobshort}{Designation}{Jan 2021 - present}
 %long long line of blah blah that will wrap when the table fills the column width long long line of blah blah that will wrap when the table fills the column width long long line of blah blah that will wrap when the table fills the column width long long line of blah blah that will wrap when the table fills the column width
@@ -237,7 +275,7 @@ Septiembre, 2018 & \textit{Residencia de creación}. Colectiva 22bits. Investiga
 \multicolumn{2}{@{}X@{}}{\textit{Académico adjunto, Departamento de Artes Visuales} 
 
 
-Media II (Introducción a las Artes Mediales), desde 2022
+Medios II (Introducción a las Artes Mediales), desde 2022
 
 Taller complementario de Arte y Electrónica, desde 2023
 
@@ -252,7 +290,9 @@ Taller optativo de Arte y Electrónica (Escuela de Artes Visuales), desde 2024
 
 Diseño de máquinas electrónicas (Escuela de Diseño, junto a Aarón Montoya), desde 2025
 
-Diseño de máquinas computacionales (Escuela de Diseño, junto a Aarón Montoya), desde 2025}  
+Diseño de máquinas computacionales (Escuela de Diseño, junto a Aarón Montoya), desde 2025
+
+Pensamiento Computacional (Escuela de Diseño), desde 2026}  
 \\
 \end{tabularx}
 
@@ -280,6 +320,11 @@ Tecnología Aplicada III: Objeto, desde 2024
 %	SKILLS
 %----------------------------------------------------------------------------------------
 \section{Becas y premios}
+
+\begin{tabularx}{\linewidth}{@{}l X@{}}
+2026 &  \normalsize{\textsc{Beca Completa}. Beca interna de arancel y mantención para formar parte del programa de Doctorado en Artes y Humanidades de la Universidad de Santiago de Chile.}\\
+\end{tabularx}
+
 \begin{tabularx}{\linewidth}{@{}l X@{}}
 2023 &  \normalsize{\textsc{Premio del público}. Obra: 'La memoria contándole a la luz el sonido de la lluvia'. XVI Premio de Arte Joven MAVI-UC.}\\
 \end{tabularx}
@@ -297,6 +342,6 @@ Tecnología Aplicada III: Objeto, desde 2024
 \end{tabularx}
 
 \vfill
-\center{\footnotesize Last updated: \today}
+\center{\footnotesize Última actualización: \today}
 
 \end{document}
